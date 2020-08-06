@@ -1,6 +1,9 @@
 import { Component, h } from '@stencil/core';
 import PouchDB from 'pouchdb-browser';
 
+/* If using pouchdb via script tag then do this to get typing */
+// declare var PouchDB: PouchDB.Static;
+
 @Component({
   tag: 'app-root',
   styleUrl: 'app-root.css',
