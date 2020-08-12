@@ -39,7 +39,7 @@ export class AppRoot {
     });
   }
 
-  async componentDidUnload() {
+  async disconnectedCallback() {
     if (this._sync) {
       this._sync.cancel();
     }

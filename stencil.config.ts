@@ -1,6 +1,5 @@
 import { Config } from '@stencil/core';
 import nodePolyfills from 'rollup-plugin-node-polyfills';
-import resolvePlugin from '@rollup/plugin-node-resolve';
 
 // https://stenciljs.com/docs/config
 
@@ -16,10 +15,8 @@ export const config: Config = {
       baseUrl: 'https://myapp.local/'
     }
   ],
+  nodeResolve: { browser: true },
   rollupPlugins: {
-    before: [
-      resolvePlugin({ browser: true })
-    ],
     after: [
       nodePolyfills(),
     ]
